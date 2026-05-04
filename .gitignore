@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+data/
+outputs/
+results/
+finetuned_result/
+eval_results/
+docs/codex/
+*.pt
+*.bin
+*.safetensors
+*.jsonl
+*.tar.gz

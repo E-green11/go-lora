@@ -1,0 +1,30 @@
+# Beyond Decoupled PEFT: Geometry-Aware Low-Rank Adaptation via Riemannian Reparameterization
+
+This repository is an anonymous code release for the paper:
+
+**Beyond Decoupled PEFT: Geometry-Aware Low-Rank Adaptation via Riemannian Reparameterization**
+
+## Abstract
+
+Low-Rank Adaptation (LoRA) and its weight-decomposed variants dominate parameter-efficient fine-tuning, yet their directional update mechanisms remain geometrically mismatched to the normalized parameterization they impose. In existing decoupled PEFT methods, low-rank directional updates are computed in unconstrained Euclidean space and only then projected back onto a spherical manifold, which can introduce capacity redundancy and gradient squashing. To address these limitations, we propose **Geodesic Orthogonal Low-Rank Adaptation (GO-LoRA)**, a geometry-aware reparameterization framework for decoupled PEFT. GO-LoRA first applies orthogonal tangent projection to remove components parallel to the pretrained base direction, ensuring that the low-rank directional budget is devoted entirely to tangent-space motion. It then uses a geodesic flow based on the Riemannian Exponential Map to construct manifold-consistent directional updates on the hypersphere, improving geometric fidelity relative to Euclidean normalization while retaining standard optimization over the underlying low-rank parameters. Extensive experiments across language, vision, code generation, and multimodal reasoning tasks show that GO-LoRA consistently outperforms strong LoRA baselines while introducing no additional inference-time overhead after offline merging.
+
+## Repository Overview
+
+This release contains the core code used for GO-LoRA experiments across multiple task families:
+
+- `commonsense_reasoning/`
+  Code for language-model commonsense reasoning experiments.
+- `ViTclass/`
+  Code for image classification experiments.
+- `math_code_genetation/`
+  Code for math and code generation experiments.
+- `multimodal_vl_bart/`
+  Code for multimodal vision-language experiments based on VL-BART.
+
+## Scope of This Release
+
+This is a code-only anonymous release prepared for paper review. It contains the main implementation components for GO-LoRA and the associated baselines used in the experimental study. Datasets, checkpoints, logs, and full execution assets are not included in this package.
+
+## Submission Status
+
+This code accompanies a paper currently under review for **NeurIPS 2026**.
