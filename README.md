@@ -21,9 +21,6 @@ This release contains the core code used for GO-LoRA experiments across multiple
 - `multimodal_vl_bart/`
   Code for multimodal vision-language experiments based on VL-BART.
 
-## Scope of This Release
-
-This is a code-only anonymous release prepared for paper review. It contains the main implementation components for GO-LoRA and the associated baselines used in the experimental study. Datasets, checkpoints, logs, and full execution assets are not included in this package.
 
 ## Submission Status
 
