@@ -1,2 +1,0 @@
-"""ViTclass image classification framework."""
-
